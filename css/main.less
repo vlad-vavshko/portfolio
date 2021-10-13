@@ -29,6 +29,7 @@ body{
         left: 500px;
     }
 }
+
 /* this is for the back flap of the folder */
 .folder{
   -webkit-perspective: 500px;
@@ -47,8 +48,8 @@ body{
   transition: all 300ms ease;
   background-image: url(../images/folder_bg.jpg);
   background-size: cover;
-
 }
+
 /* this is for the folder's tab */
 .folder::before{
   background-image: url(../images/folder_bg.jpg);
@@ -62,6 +63,7 @@ body{
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
+
 /* this is for the folder's front flap */
 .folder::after{
   width: 340px;
@@ -83,6 +85,7 @@ body{
   background-size: cover;
 
 }
+
 /* this is for the piece of paper inside the folder */
 .folder-inside{
   width: 320px;
@@ -102,6 +105,7 @@ body{
         text-align: right;
     }
 }
+
 /* this is for the lines on the paper */
 .folder-inside::before{
   content: '';
@@ -120,21 +124,23 @@ body{
   transform: rotate(-90deg);
   opacity: 0.15;
 }
+
 /* finally let's get this folder to rotate when we hover on it */
 .folder:hover{
   -webkit-transform: translate(-50%, -52%);
   transform: translate(-50%, -52%);
 }
+
 .folder:hover::after{
   -webkit-transform: rotateX(-15deg);
   transform: rotateX(-15deg);
 }
+
 .folder:hover .folder-inside{
   -webkit-transform: rotate(-7deg) translateY(-15%);
   transform: rotate(-7deg) translateY(-15%);
 }
 /* hover over the folder to see the effect in action */
-
 
 .top-secret {
     font-family: 'Special Elite', cursive;
@@ -142,3 +148,5 @@ body{
     font-weight: 700;
     font-size: 32px;
 }
+
+// 
