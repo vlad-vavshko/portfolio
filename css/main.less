@@ -120,7 +120,7 @@ body{
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
   cursor: url('../images/magnifier-glass.png'), auto;
-    .top-secret {
+  .top-secret {
         padding: 10px 10px 0 0; 
         text-align: right;
     }
@@ -173,14 +173,20 @@ body{
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   backdrop-filter: blur(10px);
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.6s;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  &.open {
+    visibility: visible;
+    opacity: 1;
+  }
   .modal-content {
     background-color: #f9ece4;
     width: 90%;
@@ -262,3 +268,36 @@ body{
   }
 }
 
+// .folder-inside {
+//   &.open {
+//     background-color: #f9ece4;
+//     width: 1440px;
+//     height: 900px;
+//     border-radius: 20px;
+//     padding: 20px 40px;
+//     position: relative;
+//     box-shadow: 0 0 10px #fff;
+//     border: 1px solid #000;
+//     font-family: 'Special Elite', cursive;
+//     font-size: 20px;
+//     letter-spacing: 1px;
+//     display: flex;
+//     justify-content: space-between;
+//     top: 0;
+//     left: 0;
+//     z-index: 1;
+//   }
+// }
+// .folder-inside.open .folder:hover{
+//   -webkit-transform: none;
+//   transform: none;
+// }
+
+// .folder:hover .folder-inside.open{
+//   -webkit-transform: none;
+//   transform: none;
+// }
+
+// // .folder-inside.open .folder {
+// //   position: static ;
+// // }

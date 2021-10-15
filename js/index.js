@@ -8,12 +8,18 @@
 
         //open modal
         file.addEventListener( "click", function () {
-            modal.style.display = 'flex'
+            modal.classList.add( 'open' )
             lightBox.style.display = 'none'
+            
         } );
+
+        // file.addEventListener( "click", function () {
+        //     file.classList.add('open')
+
+        // } );
         //close modal
         closeBtn.addEventListener( "click", function () {
-            modal.style.display = 'none'
+            modal.classList.remove( 'open' )
             lightBox.style.display = 'block'
 
         } );
