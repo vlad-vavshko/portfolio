@@ -5,6 +5,7 @@
         var modal = document.getElementsByClassName( 'modal-container' )[0];
         var pos = document.documentElement;
         var lightBox = document.getElementsByClassName( 'light' )[0];
+        
 
         //open modal
         file.addEventListener( "click", function () {
@@ -30,4 +31,5 @@
             pos.style.setProperty( '--y', e.clientY + 'px')
             
         })
+
     });
