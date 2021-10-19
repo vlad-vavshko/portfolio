@@ -257,21 +257,21 @@ a {
     flex-wrap: wrap;
     font-size: 16px;
     justify-content: space-between;
-    overflow-y: scroll;
-    padding: 5px;
-    box-shadow: inset 0 0 10px #000;
-    border-radius: 10px;
-    &::-webkit-scrollbar {
-      width: 10px;
-    }
-    &::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 5px grey; 
-      border-radius: 10px;
-    }
-    &::-webkit-scrollbar-thumb {
-      background: #000;
-      border-radius: 10px;
-    }
+    // overflow-y: scroll;
+    // padding: 5px;
+    // box-shadow: inset 0 0 10px #000;
+    // border-radius: 10px;
+    // &::-webkit-scrollbar {
+    //   width: 10px;
+    // }
+    // &::-webkit-scrollbar-track {
+    //   box-shadow: inset 0 0 5px grey; 
+    //   border-radius: 10px;
+    // }
+    // &::-webkit-scrollbar-thumb {
+    //   background: #000;
+    //   border-radius: 10px;
+    // }
     div {
       margin: 10px;
       span {
@@ -319,3 +319,55 @@ a {
 }
 
 
+.company-name {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  .company-img {
+    width: 50px;
+    margin-right: 10px;
+    border: 1px solid #000;
+  }
+}
+
+.scroll-container.experience-container {
+  max-height: 500px;
+}
+
+
+
+.scroll-container {
+  box-shadow: inset 0 0 10px #000;
+  border-radius: 10px;
+  padding: 10px;
+  overflow-y: scroll;
+  // max-height: 279px;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 10px
+  }
+}
+
+.certificates-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 10px;
+  .certificate-img {
+    width: 230px; 
+    margin: 10px;
+    box-shadow: 0 0 5px #000;
+    transition: all 0.3s;
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0 15px #000;
+    }
+  }
+}
