@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Vladyslav Vavshko</title>
     <link rel="stylesheet/less" type="text/css" href="./css/main.less" />
+    <link rel="stylesheet" href="./css/adaptive.css">
 </head>
 <body>
   <div class="container">
@@ -26,7 +27,7 @@
             <div><span>E-mail:</span> <a href="mailto:vladyslav.vavshko@gmail.com">vladyslav.vavshko@gmail.com</a></div>
             <div><span>Phone number:</span> <a href="tel:+380731140473">+380731140473</a></div>
             <div><span>City:</span> Vinnytsia</div>
-            <div><span>LinkedIn:</span> <a href="https://www.linkedin.com/in/vladyslav-vavshko" target="_blank">link</a></div>
+            <div><span>LinkedIn:</span> <a href="https://www.linkedin.com/in/vladyslav-vavshko" target="_blank">link</a> <img class="qr-code" src="./images/linkedin_qr_code.jpg" alt=""></div>
           </div>
           <div class="data-title">Languages:</div>
           <div class="data-content">
@@ -41,6 +42,10 @@
             <div><span>Slack</span></div>
             <div><span>JSON</span></div>
             <div><span>VPN</span></div>
+            <div><span>SFCC</span></div>
+            <div><span>Drupal</span></div>
+            <div><span>Sitecore</span></div>
+            <div><span>Logs analysis</span></div>
             <div><span>Test planning and estimation</span></div>
             <div><span>Bug reporting</span></div>
             <div><span>Root cause analysis</span></div>
@@ -59,7 +64,7 @@
             <div><span>3PI Testing</span></div>
             <div><span>eCommerce</span></div>
             <div><span>Smoke testing</span></div>
-            <div><span>Reggression testing</span></div>
+            <div><span>Regression testing</span></div>
             <div><span>Confluence</span></div>
             <div><span>Dev tools</span></div>
             <div><span>Cross-browser Testing</span></div>
@@ -68,7 +73,10 @@
           </div> 
       </div>
       <div class="column">
-        <img id="modal-img" src="./images/test.jpg" alt="Profile image">
+        <div class="profile-imgs">
+          <img class="tilt" src="./images/profile_img_2.png" alt="Profile">
+          <img class="tilt" src="./images/profile_img_1.png" alt="Profile">
+        </div>
         <div class="data-title">Personal Qualities:</div>
         <ul class="list">
           <li>Team player</li>
@@ -135,19 +143,28 @@
               <span>Astound:</span>
             </a>
           <ul class="list">
-            <li>Black box testing</li>
-            <li>Communication with team member from abroad office</li>
-            <li>Check the results of web scraping</li>
+            <li>Testing of an e-commerce platform</li>
+            <li>Working within geographically distributed teams</li>
+            <li>Analyze business, functional requirements, technical specifications and other requirements</li>
+            <li>Create test cases in the test case management tool to ensure the full requirements coverage</li>
+            <li>Execute planned test cases/scenarios for the testing levels/types defined within the project</li>
+            <li>Create bug reports in the bug tracking system and perform the fixed bugs' verification</li>
+            <li>Keep all project QA-related documents/files up-to-date</li>
+            <li>Actively participate in daily project team meetings and brainstorming activities related to the project issues</li>
+            <li>Provide updates to QA Lead and Project Manager about effort estimates and status of assigned tasks</li>
+            <li>Collaborate with other teams across the engineering department</li>
+            <li>Provide recommendations to QA Lead and  Project Manager to improve QA-related procedures, systems, and tools</li>
+            <li>Actively contribute to continuous improvements to testing methodology and underlying processes</li>
           </ul>
 
         </div>
         <div class="data-title">Certifications:</div>
           <div class="certificates-container scroll-container">
-              <img class="certificate-img for-modal-img" src="./images/certificates/pointer.jfif" data-img-src="./images/certificates/pointer.jfif" alt="Pointer">
-              <img class="certificate-img for-modal-img" src="./images/certificates/python_automation.png" data-img-src="./images/certificates/python_automation.png" alt="Python automation">
-              <img class="certificate-img for-modal-img" src="./images/certificates/istqb.jfif" data-img-src="./images/certificates/istqb.jfif" alt="ISTQB">
-              <img class="certificate-img for-modal-img" src="./images/certificates/itlogia.jfif" data-img-src="./images/certificates/itlogia.jfif" alt="Itlogia">
-              <img class="certificate-img for-modal-img" src="./images/certificates/udemy.jfif" data-img-src="./images/certificates/udemy.jfif" alt="API Postman">
+              <img class="certificate-img for-modal-img tilt" src="./images/certificates/pointer.jfif" data-img-src="./images/certificates/pointer.jfif" alt="Pointer" title="Pointer Certification for Software Quality Assurance and Testing">
+              <img class="certificate-img for-modal-img tilt" src="./images/certificates/python_automation.png" data-img-src="./images/certificates/python_automation.png" alt="Python automation" title="Python Automation and Testing">
+              <img class="certificate-img for-modal-img tilt" src="./images/certificates/istqb.jfif" data-img-src="./images/certificates/istqb.jfif" alt="ISTQB" title="ISTQB Certificated Tester - Foundation Level">
+              <img class="certificate-img for-modal-img tilt" src="./images/certificates/itlogia.jfif" data-img-src="./images/certificates/itlogia.jfif" alt="Itlogia" title="Itlogia web-developer course">
+              <img class="certificate-img for-modal-img tilt" src="./images/certificates/udemy.jfif" data-img-src="./images/certificates/udemy.jfif" alt="API Postman" title="Testing API with Postman">
 
 
               
@@ -156,15 +173,33 @@
     </div>
   </div>
 
-  <div class="modal-container">
-    <div class="modal-img">
-      <img src="./images/certificates/istqb.jfif" alt="">
+  <div class="modal-container modal-img">
+    <img id='close-img' src="./images/close.png" alt="Close button">
+    <div class="modal-img-content">
+      <img class="tilt" src="" alt="Certificate image">
+      <div class="image-description"></div>
     </div>
+   
   </div>
 
 
   <div class="light"></div>
+
+
+
+
+
   <script src="https://cdn.jsdelivr.net/npm/less@4.1.1" ></script>
+  <script src="./js/vanilla-tilt.js"></script>
+  <script type="text/javascript">
+    VanillaTilt.init(document.querySelectorAll(".tilt"), {
+        max: 25,
+        speed: 400,
+        glare: true,
+        "max-glare" : 0.6,
+        reverse: false,
+    });
+</script>
   <script src="./js/index.js"></script>
 </body>
 </html>
