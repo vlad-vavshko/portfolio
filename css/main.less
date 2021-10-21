@@ -20,6 +20,7 @@ a {
   text-decoration: none;
   font-weight: 700;
   font-style: italic;
+  overflow-wrap: break-word;
   &:hover {
     text-decoration: underline;
   }
@@ -28,9 +29,8 @@ a {
 .container {
   width: 100%;
   height: 100vh;
-  cursor: none;
     &::before {
-        content: '[RESTRICTED AREA] - [RESTRICTED AREA] - [RESTRICTED AREA] - [RESTRICTED AREA] - [RESTRICTED AREA] - [RESTRICTED AREA]';
+        // content: '[RESTRICTED AREA] - [RESTRICTED AREA] - [RESTRICTED AREA] - [RESTRICTED AREA] - [RESTRICTED AREA] - [RESTRICTED AREA]';
         font-weight: bold;
         font-size: 30px;
         background-color: yellow;
@@ -48,7 +48,7 @@ a {
 
 .container {
     &::after {
-        content: '[RESTRICTED AREA] - [RESTRICTED AREA] - [RESTRICTED AREA] - [RESTRICTED AREA] - [RESTRICTED AREA] - [RESTRICTED AREA]';
+        // content: '[RESTRICTED AREA] - [RESTRICTED AREA] - [RESTRICTED AREA] - [RESTRICTED AREA] - [RESTRICTED AREA] - [RESTRICTED AREA]';
         font-weight: bold;
         font-size: 30px;
         background-color: yellow;
@@ -262,7 +262,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     font-size: 16px;
-    justify-content: space-between;
+    justify-content: flex-start;
     // overflow-y: scroll;
     // padding: 5px;
     // box-shadow: inset 0 0 10px #000;
@@ -337,7 +337,7 @@ a {
 }
 
 .scroll-container.experience-container {
-  max-height: 500px;
+  max-height: 460px;
 }
 
 
@@ -364,7 +364,7 @@ a {
 .certificates-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 10px;
   .certificate-img {
     width: 230px; 
@@ -382,6 +382,7 @@ a {
 .modal-container.modal-img {
   // visibility: visible;
   // opacity: 1;
+  padding: 10px;
   &.open {
     visibility: visible;
     opacity: 1;

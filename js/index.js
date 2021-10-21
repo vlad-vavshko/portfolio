@@ -56,6 +56,21 @@
             console.log(0)
         } );
 
-
-
+        //add scroll clas to modal-content
+        
+        var modalContent = document.querySelector('.modal-content');
+        if (window.innerWidth < 1561) {
+            modalContent.classList.add('scroll-container');
+            console.log(true)
+        } else {
+            modalContent.classList.remove('scroll-container');
+        }
+        window.addEventListener("resize", function() {
+            if (window.innerWidth < 1561) {
+                modalContent.classList.add('scroll-container');
+                console.log(true)
+            } else {
+                modalContent.classList.remove('scroll-container');
+            }
+        }, true);
     });
