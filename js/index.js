@@ -1,5 +1,6 @@
+       
     document.addEventListener('DOMContentLoaded', function() {
-        
+                
         var file = document.getElementById( 'folder-inside' );
         var closeBtn = document.getElementById( 'close' );
         var modal = document.getElementsByClassName( 'modal-container' )[0];
@@ -72,4 +73,10 @@
                 modalContent.classList.remove('scroll-container');
             }
         }, true);
+
+        window.setTimeout(stayedLongUser,3000)
+
+        function stayedLongUser() {
+            //
+        }
     });

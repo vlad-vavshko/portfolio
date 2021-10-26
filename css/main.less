@@ -373,9 +373,11 @@ a {
     margin: 10px;
     box-shadow: 0 0 5px #000;
     transition: all 0.3s;
+    filter: grayscale(1);
     &:hover {
-      cursor: pointer;
+      cursor: zoom-in;
       box-shadow: 0 0 15px #000;
+      filter: grayscale(0);
     }
   }
 }
