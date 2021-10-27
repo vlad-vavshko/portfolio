@@ -43,7 +43,6 @@
                 var imageSrc = event.target.getAttribute('data-img-src');
                 var imageTitle = event.target.getAttribute('title');
                 modalImg.classList.add('open')
-
                 var popupImg = document.querySelector('.modal-img-content > img');
                 var popupTitle = document.getElementsByClassName('image-description')[0];
                 console.log(popupTitle)
@@ -80,3 +79,6 @@
             //
         }
     });
+
+
+    

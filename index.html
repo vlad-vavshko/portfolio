@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Vladyslav Vavshko</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet/less" type="text/css" href="./css/main.less" />
     <link rel="stylesheet/less" type="text/css" href="./css/adaptive.less" />
 
@@ -27,7 +28,8 @@
     <div class="modal-container">
       <div class="modal-content">
         <!-- OLD PAPER FILTER -->
-        <div class="parchment"></div>
+        <div class="parchment">
+        </div>
               
 
         <!-- OLD PAPER FILTER -->
@@ -176,12 +178,29 @@
         </ul>
         </div>
         <div class="data-title">Certifications:</div>
-          <div class="certificates-container scroll-container">
-              <img class="certificate-img for-modal-img" src="./images/certificates/pointer.jfif" data-img-src="./images/certificates/pointer.jfif" alt="Pointer" title="Pointer Certification for Software Quality Assurance and Testing">
-              <img class="certificate-img for-modal-img" src="./images/certificates/python_automation.png" data-img-src="./images/certificates/python_automation.png" alt="Python automation" title="Python Automation and Testing">
-              <img class="certificate-img for-modal-img" src="./images/certificates/istqb.jfif" data-img-src="./images/certificates/istqb.jfif" alt="ISTQB" title="ISTQB Certificated Tester - Foundation Level">
-              <img class="certificate-img for-modal-img" src="./images/certificates/itlogia.jfif" data-img-src="./images/certificates/itlogia.jfif" alt="Itlogia" title="Itlogia Web-developer Course">
-              <img class="certificate-img for-modal-img" src="./images/certificates/udemy.jfif" data-img-src="./images/certificates/udemy.jfif" alt="API Postman" title="Testing API with Postman">            
+          <!-- <div class="certificates-container scroll-container"></div> -->
+
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="certificate-img for-modal-img" src="./images/certificates/pointer.jfif" data-img-src="./images/certificates/pointer.jfif" alt="Pointer" title="Pointer Certification for Software Quality Assurance and Testing">
+                </div>
+                <div class="swiper-slide">
+                    <img class="certificate-img for-modal-img" src="./images/certificates/python_automation.png" data-img-src="./images/certificates/python_automation.png" alt="Python automation" title="Python Automation and Testing">              
+                </div>
+                <div class="swiper-slide">
+                    <img class="certificate-img for-modal-img" src="./images/certificates/istqb.jfif" data-img-src="./images/certificates/istqb.jfif" alt="ISTQB" title="ISTQB Certificated Tester - Foundation Level">              
+                </div>
+                <div class="swiper-slide">
+                    <img class="certificate-img for-modal-img" src="./images/certificates/itlogia.jfif" data-img-src="./images/certificates/itlogia.jfif" alt="Itlogia" title="Itlogia Web-developer Course">
+                </div>
+                <div class="swiper-slide">
+                    <img class="certificate-img for-modal-img" src="./images/certificates/udemy.jfif" data-img-src="./images/certificates/udemy.jfif" alt="API Postman" title="Testing API with Postman">                          
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
           </div>
       </div>
     </div>
@@ -201,9 +220,13 @@
   
 
 
-
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Less JS -->
   <script src="https://cdn.jsdelivr.net/npm/less@4.1.1" ></script>
+  <!-- Vanilla Tilt JS -->
   <script src="./js/vanilla-tilt.js"></script>
+  <!-- Initialize Tilt -->
   <script type="text/javascript">
     VanillaTilt.init(document.querySelectorAll(".tilt"), {
         max: 25,
@@ -213,6 +236,23 @@
         reverse: false,
     });
 </script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      cssMode: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      mousewheel: true,
+      keyboard: true,
+    });
+</script>
+
+
   <script src="./js/index.js"></script>
 </body>
 </html>
