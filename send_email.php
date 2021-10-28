@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     // создаем переменную с содержанием письма
-    $content = $name . ' оставил заявку на звонок. Его телефон: ' . $phone;
+    $content = $first_name . $last_name . 'Email:' . $email . ' His message: ' . $phone;
 
     // Первый параметр - кому отправляем письмо, второй - тема письма, третий - содержание
     $success = mail("vavshko.qa@gmail.com", 'Email from portfolio website!', $content);
