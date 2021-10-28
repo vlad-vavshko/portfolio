@@ -223,7 +223,7 @@
       </div>
       <div class="content-wrapper">
           <div class="form-container">
-              <form action="send_email.php" class="email form" autocomplete="off" method="POST">
+              <form class="email form" autocomplete="off" method="POST">
                 <div class="input-wrapper">
                     <input type="text" class="form-input" name="first-name" placeholder="First Name">
                     <div class="error-msg">Enter valid value</div>
@@ -233,7 +233,7 @@
                     <div class="error-msg">Enter valid value</div>
                 </div>
                 <div class="input-wrapper">
-                    <input type="email" class="form-input" name="email" placeholder="E-mail">
+                    <input type="email" class="form-input" name="email" id="email" placeholder="E-mail">
                     <div class="error-msg">Enter valid value</div>
                 </div>
                 <!-- <div class="input-wrapper">
@@ -244,7 +244,7 @@
                     <textarea class="form-input scroll-container" name="message" id="email-msg" cols="30" rows="9" placeholder="Message"></textarea>
                     <div class="error-msg">Enter valid value</div>
                 </div>
-                <input class="primary-btn" type="submit" value="Submit">
+                <input class="primary-btn" type="submit" value="Submit" onclick="sendEmail()">
               </form>
           </div>
       </div>
@@ -255,8 +255,8 @@
 
   <div class="light"></div>
   
-
-
+<!-- SMTP JS -->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <!-- Less JS -->
@@ -289,6 +289,8 @@
     });
 </script>
 <!-- Initialize iTyped JS -->
+
+
 
   <script src="./js/index.js"></script>
 </body>

@@ -87,6 +87,8 @@
         function stayedLongUser() {
             modalFormPopup.classList.add( 'open' )
         }
+
+    
     });
 
 
