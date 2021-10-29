@@ -40,7 +40,7 @@
             <div><span>E-mail:</span> <a href="mailto:vladyslav.vavshko@gmail.com">vladyslav.vavshko@gmail.com</a></div>
             <div><span>Phone number:</span> <a href="tel:+380731140473">+380731140473</a></div>
             <div><span>City:</span> Vinnytsia</div>
-            <div><span>LinkedIn:</span> <a href="https://www.linkedin.com/in/vladyslav-vavshko" target="_blank">link</a> or QR code:  <img class="qr-code" src="./images/linkedin_qr_code.jpg" alt=""></div>
+            <div><span>LinkedIn:</span> <a href="https://www.linkedin.com/in/vladyslav-vavshko" target="_blank">link</a> <span id="m-qr-code"> or QR code:  <img class="qr-code" src="./images/linkedin_qr_code.jpg" alt="QR LinkedIn"></span></div>
             <a class="primary-btn" href="./images/linkedin_qr_code.jpg" download>Download CV</a>
           </div>
           <div class="data-title">Languages:</div>
@@ -225,34 +225,28 @@
           <div class="form-container">
               <form action="send_email.php" class="email-form" autocomplete="off" method="POST">
                 <div class="input-wrapper">
-                    <input type="text" class="form-input" name="first-name" placeholder="First Name">
+                    <input type="text" class="form-input" name="first-name" placeholder="First Name*">
                     <div class="error-msg">Enter valid value</div>
                 </div>
                 <div class="input-wrapper">
-                    <input type="text" class="form-input" name="last-name" placeholder="Last Name">
+                    <input type="text" class="form-input" name="last-name" placeholder="Last Name*">
                     <div class="error-msg">Enter valid value</div>
                 </div>
                 <div class="input-wrapper">
-                    <input type="email" class="form-input" name="email" id="email" placeholder="E-mail">
+                    <input type="email" class="form-input" name="email" id="email" placeholder="E-mail*">
                     <div class="error-msg">Enter valid value</div>
                 </div>
-                <!-- <div class="input-wrapper">
-                    <input type="text" class="form-input" name="email-subject" placeholder="E-mail Subject">
-                    <div class="error-msg">Enter valid value</div>
-                </div> -->
                 <div class="input-wrapper">
-                    <textarea class="form-input scroll-container" name="message" id="email-msg" cols="30" rows="9" placeholder="Message"></textarea>
+                    <textarea class="form-input scroll-container" name="message" id="email-msg" cols="30" rows="9" placeholder="Message*"></textarea>
                     <div class="error-msg">Enter valid value</div>
                 </div>
               </form>
               <input class="primary-btn" type="submit" value="Submit" id="formSubmit">
-
           </div>
       </div>
     </div>
   </div>
-
-
+   
 
   <div class="light"></div>
 
