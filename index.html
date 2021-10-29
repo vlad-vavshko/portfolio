@@ -223,7 +223,7 @@
       </div>
       <div class="content-wrapper">
           <div class="form-container">
-              <form class="email form" autocomplete="off" method="POST">
+              <form action="send_email.php" class="email-form" autocomplete="off" method="POST">
                 <div class="input-wrapper">
                     <input type="text" class="form-input" name="first-name" placeholder="First Name">
                     <div class="error-msg">Enter valid value</div>
@@ -244,8 +244,9 @@
                     <textarea class="form-input scroll-container" name="message" id="email-msg" cols="30" rows="9" placeholder="Message"></textarea>
                     <div class="error-msg">Enter valid value</div>
                 </div>
-                <input class="primary-btn" type="submit" value="Submit" onclick="sendEmail()">
               </form>
+              <input class="primary-btn" type="submit" value="Submit" id="formSubmit">
+
           </div>
       </div>
     </div>
@@ -254,9 +255,9 @@
 
 
   <div class="light"></div>
-  
-<!-- SMTP JS -->
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+  <!-- jQuery -->
+  <script src="./js/jquery-3.6.0.min.js"></script>
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <!-- Less JS -->
@@ -291,7 +292,7 @@
 <!-- Initialize iTyped JS -->
 
 
-
+  <script src="./js/formValidaion.js"></script>
   <script src="./js/index.js"></script>
 </body>
 </html>
