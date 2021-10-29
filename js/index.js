@@ -6,7 +6,6 @@
         var modal = document.getElementsByClassName( 'modal-container' )[0];
         var pos = document.documentElement;
         var lightBox = document.getElementsByClassName( 'light' )[0];
-        
         var imgModalClose = document.getElementById('close-img');
         var modalImg = document.getElementsByClassName('modal-img')[0];
         var certificates = document.getElementsByClassName('for-modal-img');
@@ -34,8 +33,6 @@
 
 
         // image modal
-        
-
         Array.from(certificates).forEach(function(certificate) {
             certificate.addEventListener( "click", function (event) {
                 // modalImg.classList.add( 'open' )
@@ -56,8 +53,7 @@
             console.log(0)
         } );
 
-        //add scroll clas to modal-content
-        
+        //add scroll clas to modal-content   
         var modalContent = document.querySelector('.modal-content');
         if (window.innerWidth < 1561) {
             modalContent.classList.add('scroll-container');
@@ -73,7 +69,6 @@
             }
         }, true);
 
-
         // Close form popup
         const closeFormPopup = document.getElementById('close-form-popup');
         const modalFormPopup = document.querySelector('.modal-container.form-modal');
@@ -82,7 +77,7 @@
         });
 
 
-        window.setTimeout(stayedLongUser,3000)
+        window.setTimeout(stayedLongUser,60000)
 
         function stayedLongUser() {
             modalFormPopup.classList.add( 'open' )
