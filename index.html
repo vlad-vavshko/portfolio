@@ -292,18 +292,18 @@
 
 <script>
   function validateForm() {
-    const formInputs = document.querySelectorAll('.input-wrapper .form-input')
-    formInputs.forEach(input => {
-      if (!input.value) {
-        input.classList.add('error-true')
-        input.nextSibling.nextSibling.classList.add('error-true')
-        event.preventDefault();
+    const formFields = document.querySelectorAll('.input-wrapper .form-input')
+    formFields.forEach(field => {
+      if (!field.value) {
+        field.classList.add('error-true')
+        field.nextSibling.nextSibling.classList.add('error-true')
+        field.preventDefault();
       } else {
-        input.classList.remove('error-true')
-        input.nextSibling.nextSibling.classList.remove('error-true')
+        field.classList.remove('error-true')
+        field.nextSibling.nextSibling.classList.remove('error-true')
       }
     });
-    
+
     // let firstName = document.querySelector('input[name=first-name]');
     // let lastName = document.querySelector('input[name=last-name]');
     // let email = document.querySelector('input[name=email]');
