@@ -224,26 +224,28 @@
       <div class="content-wrapper">
           <div class="form-container">
               <form action="https://formsubmit.co/vladyslav.vavshko@gmail.com" class="email-form" autocomplete="off" method="POST">
-                <input type="hidden" name="_subject" value="NEW Email from Portfolio website!">
+                <input type="hidden" name="_subject" value="New Email from Portfolio website!">
+                <input type="hidden" name="_next" value="https://vlad-vavshko-cv.herokuapp.com/">
+                <input type="hidden" name="_template" value="table">
                 <div class="input-wrapper">
                     <input type="text" class="form-input" name="first-name" placeholder="First Name*">
                     <div class="error-msg">Enter valid value</div>
                 </div>
                 <div class="input-wrapper">
-                    <input type="text" class="form-input" name="last-name" placeholder="Last Name*">
+                    <input type="text" class="form-input" name="last-name" placeholder="Last Name*" >
                     <div class="error-msg">Enter valid value</div>
                 </div>
                 <div class="input-wrapper">
-                    <input type="email" class="form-input" name="email" id="email" placeholder="E-mail*">
+                    <input type="email" class="form-input" name="email" id="email" placeholder="E-mail*" >
                     <div class="error-msg">Enter valid value</div>
                 </div>
                 <div class="input-wrapper">
-                    <textarea class="form-input scroll-container" name="message" id="email-msg" cols="30" rows="9" placeholder="Message*"></textarea>
+                    <textarea class="form-input scroll-container" name="message" id="email-msg" cols="30" rows="9" placeholder="Message*" ></textarea>
                     <div class="error-msg">Enter valid value</div>
                 </div>
-              <button class="primary-btn" type="submit" value="Submit" id="formSubmit">
-
+                <button class="primary-btn" type="submit" value="Submit" id="formSubmit" onclick="validateForm()">Send </button>
               </form>
+
               <!-- <input class="primary-btn" type="submit" value="Submit" id="formSubmit"> -->
           </div>
       </div>
@@ -286,10 +288,53 @@
       keyboard: true,
     });
 </script>
+
+
+<script>
+  function validateForm() {
+    let firstName = document.querySelector('input[name=first-name]');
+    let lastName = document.querySelector('input[name=last-name]');
+    let email = document.querySelector('input[name=email]');
+    let emailMessage = document.querySelector('textarea[name=message]');
+
+    if(!firstName.value && !lastName.value && !email.value && !emailMessage.value) {
+      event.preventDefault()
+      if(!firstName.value) {
+          firstName.classList.add('error-true');
+          firstName.nextSibling.nextSibling.classList.add('error-true');
+      } else {
+          firstName.classList.remove('error-true');
+          firstName.nextSibling.nextSibling.classList.remove('error-true');
+      }
+      if(!lastName.value) {
+          lastName.classList.add('error-true');
+          lastName.nextSibling.nextSibling.classList.add('error-true');
+      } else {
+          lastName.classList.remove('error-true');
+          lastName.nextSibling.nextSibling.classList.remove('error-true');
+      }
+      if(!email.value) {
+          email.classList.add('error-true');
+          email.nextSibling.nextSibling.classList.add('error-true');
+      } else {
+          email.classList.remove('error-true');
+          email.nextSibling.nextSibling.classList.remove('error-true');
+      }
+      if(!emailMessage.value) {
+          emailMessage.classList.add('error-true');
+          emailMessage.nextSibling.nextSibling.classList.add('error-true');
+      } else {
+          emailMessage.classList.remove('error-true');
+          emailMessage.nextSibling.nextSibling.classList.remove('error-true');
+      }         
+  }
+}
+
+</script>
 <!-- Initialize iTyped JS -->
 
 
-  <!-- <script src="./js/formValidaion.js"></script> -->
+  <script src="./js/formValidaion.js"></script>
   <script src="./js/index.js"></script>
 </body>
 </html>
