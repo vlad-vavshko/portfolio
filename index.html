@@ -292,42 +292,55 @@
 
 <script>
   function validateForm() {
-    let firstName = document.querySelector('input[name=first-name]');
-    let lastName = document.querySelector('input[name=last-name]');
-    let email = document.querySelector('input[name=email]');
-    let emailMessage = document.querySelector('textarea[name=message]');
+    const formInputs = document.querySelectorAll('.input-wrapper .form-input')
+    formInputs.forEach(input => {
+      if (!input.value) {
+        input.classList.add('error-true')
+        input.nextSibling.nextSibling.classList.add('error-true')
+        event.preventDefault();
+      } else {
+        input.classList.remove('error-true')
+        input.nextSibling.nextSibling.classList.remove('error-true')
+      }
+    });
+    
+    // let firstName = document.querySelector('input[name=first-name]');
+    // let lastName = document.querySelector('input[name=last-name]');
+    // let email = document.querySelector('input[name=email]');
+    // let emailMessage = document.querySelector('textarea[name=message]');
 
-    if(!firstName.value && !lastName.value && !email.value && !emailMessage.value) {
-      event.preventDefault()
-      if(!firstName.value) {
-          firstName.classList.add('error-true');
-          firstName.nextSibling.nextSibling.classList.add('error-true');
-      } else {
-          firstName.classList.remove('error-true');
-          firstName.nextSibling.nextSibling.classList.remove('error-true');
-      }
-      if(!lastName.value) {
-          lastName.classList.add('error-true');
-          lastName.nextSibling.nextSibling.classList.add('error-true');
-      } else {
-          lastName.classList.remove('error-true');
-          lastName.nextSibling.nextSibling.classList.remove('error-true');
-      }
-      if(!email.value) {
-          email.classList.add('error-true');
-          email.nextSibling.nextSibling.classList.add('error-true');
-      } else {
-          email.classList.remove('error-true');
-          email.nextSibling.nextSibling.classList.remove('error-true');
-      }
-      if(!emailMessage.value) {
-          emailMessage.classList.add('error-true');
-          emailMessage.nextSibling.nextSibling.classList.add('error-true');
-      } else {
-          emailMessage.classList.remove('error-true');
-          emailMessage.nextSibling.nextSibling.classList.remove('error-true');
-      }         
-  }
+
+  //   if(!firstName.value && !lastName.value && !email.value && !emailMessage.value) {
+  //     event.preventDefault()
+  //     if(!firstName.value) {
+  //         firstName.classList.add('error-true');
+  //         firstName.nextSibling.nextSibling.classList.add('error-true');
+  //     } else {
+  //         firstName.classList.remove('error-true');
+  //         firstName.nextSibling.nextSibling.classList.remove('error-true');
+  //     }
+  //     if(!lastName.value) {
+  //         lastName.classList.add('error-true');
+  //         lastName.nextSibling.nextSibling.classList.add('error-true');
+  //     } else {
+  //         lastName.classList.remove('error-true');
+  //         lastName.nextSibling.nextSibling.classList.remove('error-true');
+  //     }
+  //     if(!email.value) {
+  //         email.classList.add('error-true');
+  //         email.nextSibling.nextSibling.classList.add('error-true');
+  //     } else {
+  //         email.classList.remove('error-true');
+  //         email.nextSibling.nextSibling.classList.remove('error-true');
+  //     }
+  //     if(!emailMessage.value) {
+  //         emailMessage.classList.add('error-true');
+  //         emailMessage.nextSibling.nextSibling.classList.add('error-true');
+  //     } else {
+  //         emailMessage.classList.remove('error-true');
+  //         emailMessage.nextSibling.nextSibling.classList.remove('error-true');
+  //     }         
+  // }
 }
 
 </script>
