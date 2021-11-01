@@ -223,7 +223,8 @@
       </div>
       <div class="content-wrapper">
           <div class="form-container">
-              <form action="send_email.php" class="email-form" autocomplete="off" method="POST">
+              <form action="https://formsubmit.co/el/fanexi" class="email-form" autocomplete="off" method="POST">
+                <input type="hidden" name="_subject" value="NEW Email from Portfolio website!">
                 <div class="input-wrapper">
                     <input type="text" class="form-input" name="first-name" placeholder="First Name*">
                     <div class="error-msg">Enter valid value</div>
@@ -240,8 +241,10 @@
                     <textarea class="form-input scroll-container" name="message" id="email-msg" cols="30" rows="9" placeholder="Message*"></textarea>
                     <div class="error-msg">Enter valid value</div>
                 </div>
+              <button class="primary-btn" type="submit" value="Submit" id="formSubmit">
+
               </form>
-              <input class="primary-btn" type="submit" value="Submit" id="formSubmit">
+              <!-- <input class="primary-btn" type="submit" value="Submit" id="formSubmit"> -->
           </div>
       </div>
     </div>
@@ -286,7 +289,7 @@
 <!-- Initialize iTyped JS -->
 
 
-  <script src="./js/formValidaion.js"></script>
+  <!-- <script src="./js/formValidaion.js"></script> -->
   <script src="./js/index.js"></script>
 </body>
 </html>
