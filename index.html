@@ -297,7 +297,7 @@
       if (!field.value) {
         field.classList.add('error-true')
         field.nextSibling.nextSibling.classList.add('error-true')
-        field.preventDefault();
+        event.preventDefault();
       } else {
         field.classList.remove('error-true')
         field.nextSibling.nextSibling.classList.remove('error-true')
