@@ -21,7 +21,7 @@ $(document).ready(() => {
                       emailMessage.val(),
                     success: () => {
                       $('.form-modal-content .content-wrapper').hide();
-                      $('.form-modal-title').htnl('Thanks for contacting me! <br> I will be in touch with you shortly!')
+                      $('.form-modal-title').html('Thanks for contacting me! <br> I will be in touch with you shortly!')
                     },
                     error: () => {
                       alert(
