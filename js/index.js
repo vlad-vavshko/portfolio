@@ -77,7 +77,7 @@
         });
 
 
-        window.setTimeout(stayedLongUser,60000)
+        window.setTimeout(stayedLongUser,3000)
 
         function stayedLongUser() {
             modalFormPopup.classList.add( 'open' )
