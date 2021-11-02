@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet/less" type="text/css" href="./css/main.less" />
     <link rel="stylesheet/less" type="text/css" href="./css/adaptive.less" />
+    <link rel="apple-touch-icon" sizes="152x152" href="./images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="./images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
 </head>
 <body>
@@ -41,7 +48,7 @@
             <div><span>Phone number:</span> <a href="tel:+380731140473">+380731140473</a></div>
             <div><span>City:</span> Vinnytsia</div>
             <div><span>LinkedIn:</span> <a href="https://www.linkedin.com/in/vladyslav-vavshko" target="_blank">link</a> <span id="m-qr-code"> or QR code:  <img class="qr-code" src="./images/linkedin_qr_code.jpg" alt="QR LinkedIn"></span></div>
-            <a class="primary-btn" href="./images/linkedin_qr_code.jpg" download>Download CV</a>
+            <a class="primary-btn" href="./CV_Vlad_Vavshko.pdf" download>Download CV</a>
           </div>
           <div class="data-title">Languages:</div>
           <div class="data-content">
@@ -224,8 +231,9 @@
       <div class="content-wrapper">
           <div class="form-container">
               <form action="https://formsubmit.co/vladyslav.vavshko@gmail.com" class="email-form" autocomplete="off" method="POST">
+                <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_subject" value="New Email from Portfolio website!">
-                <input type="hidden" name="_next" value="https://vlad-vavshko-cv.herokuapp.com/">
+                <!-- <input type="hidden" name="_next" value="https://vlad-vavshko-cv.herokuapp.com/"> -->
                 <input type="hidden" name="_template" value="table">
                 <div class="input-wrapper">
                     <input type="text" class="form-input" name="first-name" placeholder="First Name*">
@@ -246,7 +254,6 @@
                 <button class="primary-btn" type="submit" value="Submit" id="formSubmit" onclick="validateForm()">Send </button>
               </form>
 
-              <!-- <input class="primary-btn" type="submit" value="Submit" id="formSubmit"> -->
           </div>
       </div>
     </div>
@@ -297,50 +304,12 @@
       if (!field.value) {
         field.classList.add('error-true')
         field.nextSibling.nextSibling.classList.add('error-true')
-        field.preventDefault();
+        event.preventDefault();
       } else {
         field.classList.remove('error-true')
         field.nextSibling.nextSibling.classList.remove('error-true')
       }
     });
-
-    // let firstName = document.querySelector('input[name=first-name]');
-    // let lastName = document.querySelector('input[name=last-name]');
-    // let email = document.querySelector('input[name=email]');
-    // let emailMessage = document.querySelector('textarea[name=message]');
-
-
-  //   if(!firstName.value && !lastName.value && !email.value && !emailMessage.value) {
-  //     event.preventDefault()
-  //     if(!firstName.value) {
-  //         firstName.classList.add('error-true');
-  //         firstName.nextSibling.nextSibling.classList.add('error-true');
-  //     } else {
-  //         firstName.classList.remove('error-true');
-  //         firstName.nextSibling.nextSibling.classList.remove('error-true');
-  //     }
-  //     if(!lastName.value) {
-  //         lastName.classList.add('error-true');
-  //         lastName.nextSibling.nextSibling.classList.add('error-true');
-  //     } else {
-  //         lastName.classList.remove('error-true');
-  //         lastName.nextSibling.nextSibling.classList.remove('error-true');
-  //     }
-  //     if(!email.value) {
-  //         email.classList.add('error-true');
-  //         email.nextSibling.nextSibling.classList.add('error-true');
-  //     } else {
-  //         email.classList.remove('error-true');
-  //         email.nextSibling.nextSibling.classList.remove('error-true');
-  //     }
-  //     if(!emailMessage.value) {
-  //         emailMessage.classList.add('error-true');
-  //         emailMessage.nextSibling.nextSibling.classList.add('error-true');
-  //     } else {
-  //         emailMessage.classList.remove('error-true');
-  //         emailMessage.nextSibling.nextSibling.classList.remove('error-true');
-  //     }         
-  // }
 }
 
 </script>
